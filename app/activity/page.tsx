@@ -121,7 +121,7 @@ export default function ActivityPage() {
           {/* Header */}
           <div className="flex items-center justify-between">
             <Link
-              href="/"
+              href="/dashboard"
               className="flex items-center space-x-2 text-gray-600 hover:text-gray-900"
             >
               <ArrowLeft className="w-4 h-4" />

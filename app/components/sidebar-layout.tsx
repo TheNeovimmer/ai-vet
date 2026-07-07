@@ -60,7 +60,7 @@ export default function SidebarLayout({ children, title, description }: SidebarL
 
               // Build navigation based on permissions
             const navigation = [
-              { id: 'dashboard', label: t('navigation.dashboard'), icon: Home, href: '/', alwaysShow: true },
+              { id: 'dashboard', label: t('navigation.dashboard'), icon: Home, href: '/dashboard', alwaysShow: true },
               ...(canRead('pets') ? [{ id: 'pets', label: t('navigation.pets'), icon: PawPrint, href: '/pets' }] : []),
               ...(canRead('owners') ? [{ id: 'owners', label: t('navigation.petOwners'), icon: User, href: '/owners' }] : []),
               ...(canRead('appointments') ? [{ id: 'appointments', label: t('navigation.appointments'), icon: Calendar, href: '/appointments' }] : []),

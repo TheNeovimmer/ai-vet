@@ -61,7 +61,7 @@ export default function LoginPage() {
     const checkSession = async () => {
       const session = await getSession();
       if (session) {
-        router.push('/');
+        router.push('/dashboard');
       }
     };
     checkSession();
@@ -130,7 +130,7 @@ export default function LoginPage() {
         setError('Invalid email or password');
       } else {
         setSuccess('Login successful! Redirecting to dashboard...');
-        router.push('/');
+        router.push('/dashboard');
       }
     } catch (err) {
       setError('An error occurred. Please try again.');

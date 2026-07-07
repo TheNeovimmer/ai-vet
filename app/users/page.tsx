@@ -153,7 +153,7 @@ export default function UsersPage() {
             <p className="mt-1 text-sm text-gray-700">{error || t('users.adminPrivilegesRequired')}</p>
             <div className="mt-6">
               <Link
-                href="/"
+                href="/dashboard"
                 className="inline-flex items-center space-x-2 bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors"
               >
                 <span>{t('users.backToDashboard')}</span>

@@ -18,6 +18,9 @@ dist/
 .env.production.local
 
 # Vercel
+
+# Superpowers brainstorming temp files
+.superpowers/
 .vercel
 
 # TypeScript
