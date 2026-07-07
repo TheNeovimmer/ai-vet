@@ -154,11 +154,19 @@
 
 <h3>Quick Start</h3>
 <ol>
-<li>Install Node.js 18+ and MongoDB</li>
-<li>Extract the files and run <code>npm install</code></li>
-<li>Configure environment variables in <code>.env.local</code></li>
-<li>Run <code>npm run dev</code> to start development server</li>
-<li>Configure GPT-4.1 API key in Settings → AI Settings</li>
+<li><strong>Prerequisites:</strong> Node.js 18+</li>
+<li><strong>Install dependencies:</strong> <code>npm install</code></li>
+<li><strong>Create <code>.env.local</code>:</strong>
+<pre><code>MONGODB_URI=mongodb+srv://&lt;user&gt;:&lt;password&gt;@&lt;cluster&gt;.mongodb.net/
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=&lt;generate with: openssl rand -base64 32&gt;
+</code></pre>
+</li>
+<li><strong>Seed database:</strong> <code>npm run seed</code></li>
+<li><strong>Start dev server:</strong> <code>npm run dev</code></li>
+<li><strong>Open:</strong> <a href="http://localhost:3000">http://localhost:3000</a></li>
+<li><strong>Login:</strong> <code>vet@aivet.com</code> / <code>password123</code></li>
+<li><strong>Configure AI:</strong> Settings → AI Settings → add GPT-4.1 API key</li>
 </ol>
 
 <h3>Documentation</h3>
