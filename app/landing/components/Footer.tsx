@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Logo from './Logo';
 
 const FOOTER_LINKS = [
   {
@@ -33,12 +34,12 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row justify-between gap-12 mb-12">
           <div className="max-w-xs">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-7 h-7 bg-zinc-900 dark:bg-white rounded-md flex items-center justify-center">
-                <span className="text-white dark:text-zinc-900 text-xs font-bold">V</span>
+            <Link href="/landing" className="flex items-center gap-2.5 mb-4 group">
+              <div className="transition-transform duration-300 group-hover:scale-105">
+                <Logo size={28} />
               </div>
-              <span className="font-semibold text-zinc-900 dark:text-zinc-100">AI Vet</span>
-            </div>
+              <span className="font-semibold text-zinc-900 dark:text-zinc-100 tracking-tight">AI Vet</span>
+            </Link>
             <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
               AI-powered veterinary practice management software. Built for modern clinics.
             </p>
