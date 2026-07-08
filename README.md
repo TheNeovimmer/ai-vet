@@ -169,6 +169,24 @@ NEXTAUTH_SECRET=&lt;generate with: openssl rand -base64 32&gt;
 <li><strong>Configure AI:</strong> Settings → AI Settings → add GPT-4.1 API key</li>
 </ol>
 
+<h3>Deploy on Vercel</h3>
+<ol>
+<li><strong>Push your repo</strong> to GitHub.</li>
+<li><strong>Go to</strong> <a href="https://vercel.com">vercel.com</a> → <strong>Add New</strong> → <strong>Project</strong>.</li>
+<li><strong>Import</strong> your GitHub repository.</li>
+<li><strong>Framework Preset:</strong> Next.js (auto-detected).</li>
+<li><strong>Environment Variables</strong> (add in Vercel dashboard → Settings → Environment Variables):
+<pre><code>MONGODB_URI=mongodb+srv://&lt;user&gt;:&lt;password&gt;@&lt;cluster&gt;.mongodb.net/
+NEXTAUTH_URL=https://your-app.vercel.app
+NEXTAUTH_SECRET=&lt;generate with: openssl rand -base64 32&gt;
+</code></pre>
+</li>
+<li><strong>Deploy</strong> → Vercel builds and deploys automatically.</li>
+<li><strong>Seed database:</strong> Run <code>npm run seed</code> locally after <code>MONGODB_URI</code> points to the Atlas cluster used in production (same as Vercel env).</li>
+<li><strong>After deploy:</strong> Update <code>NEXTAUTH_URL</code> in Vercel env to match your production domain if different.</li>
+<li><strong>Configure AI:</strong> Settings → AI Settings → add GPT-4.1 API key in production.</li>
+</ol>
+
 <h3>Documentation</h3>
 <p>Comprehensive documentation is included with detailed guides on:</p>
 <ul>
